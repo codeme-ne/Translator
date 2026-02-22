@@ -1,10 +1,21 @@
 # Website Translation Tool (DE → EN)
 
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-MarianMT-FFD21E)](https://huggingface.co/)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB)](https://python.org/)
+[![Tests](https://img.shields.io/badge/Tests-pytest-0A9EDC)](https://pytest.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Python CLI for turning German webpages into English copies. The pipeline
 fetches HTML, extracts translatable content, calls the Hugging Face Inference
 API (MarianMT models), and writes both the original and translated pages to
 disk. Batching, caching, and retry logic keep the number of remote calls and
 latency under control.
+
+## Live Output Demo
+
+Static output viewer (generated from real translation runs):
+
+- https://docs-zeta-blue.vercel.app
 
 ## Key Features
 - **HF backend** – uses `Helsinki-NLP/opus-mt-{src}-{dst}` translation models via
